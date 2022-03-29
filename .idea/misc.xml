@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/Android_Project/test03_1/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Android_Project/test03_1/app/src/main/res/layout/layout_conv.xml" value="0.22826086956521738" />
-        <entry key="..\:/Android_Project/test03_1/app/src/main/res/layout/layout_review.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android_Project/test03_1/app/src/main/res/layout/layout_review.xml" value="0.176" />
+        <entry key="..\:/Android_Project/test03_1/app/src/main/res/layout/layout_review_review.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android_Project/test03_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1795" />
       </map>
     </option>
   </component>
