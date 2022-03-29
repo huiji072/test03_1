@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="670dp">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            tools:context=".MapsActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/btn_map"
+            android:layout_width="138dp"
+            android:layout_height="70dp"
+            android:text="지도" />
+
+        <Button
+            android:id="@+id/btn_conv"
+            android:layout_width="138dp"
+            android:layout_height="70dp"
+            android:text="편의시설" />
+
+        <Button
+            android:id="@+id/btn_review"
+            android:layout_width="138dp"
+            android:layout_height="70dp"
+            android:text="리뷰" />
+
+    </LinearLayout>
+
+</LinearLayout>
