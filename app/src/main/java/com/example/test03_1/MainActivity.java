@@ -1,11 +1,17 @@
 package com.example.test03_1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -14,6 +20,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity
@@ -65,28 +73,48 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+    //Google Map (위치지정, 마커표시)
     @Override
     public void onMapReady(final GoogleMap googleMap) {
 
         mMap = googleMap;
 
-        LatLng SEOUL = new LatLng(37.56, 126.97);
+        LatLng GWNU = new LatLng(37.3055347, 127.9225158);
 
         MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(SEOUL);
-        markerOptions.title("서울");
-        markerOptions.snippet("한국의 수도");
+        markerOptions.position(GWNU);
+        markerOptions.title("강릉원주대학교");
         mMap.addMarker(markerOptions);
 
 
-        // 기존에 사용하던 다음 2줄은 문제가 있습니다.
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(GWNU, 17));
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        mMap.setMyLocationEnabled(true);
 
-        // CameraUpdateFactory.zoomTo가 오동작하네요.
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
-        //mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 19));
 
+    }
 
+    //네비게이션 기능
+    public void onMapSearch(View view) {
+        EditText locationSearch = (EditText) findViewById(R.id.editText);
+        String location = locationSearch.getText().toString();
+        List<Address> addressList = null;
+
+        if (location != null || !location.equals("")) {
+            Geocoder geocoder = new Geocoder(this);
+            try {
+                addressList = geocoder.getFromLocationName(location, 1);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Address address = addressList.get(0);
+            LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+            mMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));
+            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+        }
     }
 
 }
