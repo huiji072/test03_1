@@ -8,7 +8,9 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="141dp"
-        android:text="TextView" />
+        android:text="리뷰 쓰기 제보 하기"
+        android:textAlignment="center"
+        android:textColor="#03A9F4" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -20,18 +22,20 @@
             android:layout_width="70dp"
             android:layout_height="100dp"
             android:layout_weight="1"
+            android:background="#FFFFFF"
             android:src="@drawable/icon_review" />
 
         <TextView
             android:layout_width="80dp"
-            android:layout_height="100dp"/>
+            android:layout_height="100dp" />
 
         <ImageButton
             android:id="@+id/review_tip"
             android:layout_width="70dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:src="@drawable/icon_review"/>
+            android:background="#FFFFFF"
+            android:src="@drawable/icon_review" />
 
     </LinearLayout>
 
@@ -45,19 +49,29 @@
             android:id="@+id/btn_map"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:text="지도" />
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="false"
+            android:text="지도"
+            android:textColor="#03A9F4" />
 
         <Button
             android:id="@+id/btn_conv"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:text="편의시설" />
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:text="편의시설"
+            android:textColor="#03A9F4" />
 
         <Button
             android:id="@+id/btn_review"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:text="리뷰" />
+            android:background="#03A9F4"
+            android:cursorVisible="false"
+            android:text="리뷰"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 </LinearLayout>

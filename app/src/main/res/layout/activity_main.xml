@@ -9,19 +9,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <EditText
             android:id="@+id/editText"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="목적지를 입력하세요." />
+            android:hint="목적지 검색" />
+
         <Button
             android:id="@+id/search_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
+            android:background="#03A9F4"
+            android:backgroundTint="#03A9F4"
             android:onClick="onMapSearch"
-            android:text="Search" />
+            android:text="↗"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -29,11 +36,11 @@
         android:layout_height="670dp">
 
         <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/map"
-            tools:context=".MapsActivity"
-            android:name="com.google.android.gms.maps.SupportMapFragment" />
+            tools:context=".MapsActivity" />
 
     </LinearLayout>
 
@@ -47,19 +54,28 @@
             android:id="@+id/btn_map"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:text="지도" />
+            android:background="#03A9F4"
+            android:backgroundTint="#03A9F4"
+            android:text="지도"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btn_conv"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:text="편의시설" />
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:text="편의시설"
+            android:textColor="#03A9F4" />
 
         <Button
             android:id="@+id/btn_review"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:text="리뷰" />
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:text="리뷰"
+            android:textColor="#03A9F4" />
 
     </LinearLayout>
 

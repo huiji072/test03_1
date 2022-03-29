@@ -23,7 +23,7 @@
             android:layout_height="50dp"
             android:background="@null"
             android:gravity="center"
-            android:hint="제목"
+            android:hint="서비스에 대한 평가와 의견을 공유해주세요."
             android:inputType="textMultiLine"
             android:lines="8"
             android:maxLines="10"
@@ -57,12 +57,14 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:background="@null"
-        android:hint="리뷰를 작성하십시오."
+        android:hint="이동하신 목적지 또는 경로에 대한 평가를 남겨주세요.
+                        보내주신 의견은 다음 업데이트시 반영하겠습니다."
         android:inputType="textMultiLine"
         android:lines="8"
         android:maxLines="10"
         android:minLines="5"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical"
+        android:textColor="#000000" />
 
 
     <LinearLayout
@@ -95,24 +97,26 @@
         android:gravity="bottom"
         android:layout_gravity="bottom"
         >
+
         <Button
             android:id="@+id/cancelButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:layout_weight="5"
+            android:background="#FFFFFF"
+            android:gravity="center"
             android:text="취소"
-            >
-        </Button>
+            android:textColor="#03A9F4"></Button>
+
         <Button
             android:id="@+id/okButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:layout_weight="5"
+            android:background="#03A9F4"
+            android:gravity="center"
             android:text="확인"
-            >
-        </Button>
+            android:textColor="#FFFFFF"></Button>
 
     </LinearLayout>
 </LinearLayout>

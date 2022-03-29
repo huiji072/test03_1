@@ -26,19 +26,25 @@
             android:id="@+id/btn_map"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:text="지도" />
+            android:background="#FFFFFF"
+            android:text="지도"
+            android:textColor="#03A9F4" />
 
         <Button
             android:id="@+id/btn_conv"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:text="편의시설" />
+            android:background="#03A9F4"
+            android:text="편의시설"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btn_review"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:text="리뷰" />
+            android:background="#FFFFFF"
+            android:text="리뷰"
+            android:textColor="#03A9F4" />
 
 
 
