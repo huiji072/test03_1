@@ -5,8 +5,7 @@
     android:background="#FFFFFF"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
+<!--  리뷰 -> 리뷰하기 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +52,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/reviewEdit"
+        android:id="@+id/contentsEdit"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:background="@null"
@@ -76,7 +75,7 @@
         <ImageView
             android:id="@+id/reviewImageview"
             android:layout_width="match_parent"
-            android:layout_height="270dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
             android:maxWidth="200dp"
@@ -84,6 +83,10 @@
             android:onClick="onClick"
             app:srcCompat="@drawable/icon_camera"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/textResult"/>
 
 
     </LinearLayout>
@@ -99,7 +102,7 @@
         >
 
         <Button
-            android:id="@+id/cancelButton"
+            android:id="@+id/review_cancel"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="5"
@@ -108,15 +111,18 @@
             android:text="취소"
             android:textColor="#03A9F4"></Button>
 
+
+
         <Button
-            android:id="@+id/okButton"
+            android:id="@+id/review_commit"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="5"
             android:background="#03A9F4"
             android:gravity="center"
             android:text="확인"
-            android:textColor="#FFFFFF"></Button>
+            android:textColor="#FFFFFF"
+            android:onClick="mOnClick"></Button>
 
     </LinearLayout>
 </LinearLayout>

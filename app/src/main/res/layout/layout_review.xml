@@ -1,57 +1,112 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical">
-
+<!--리뷰-->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView5"
         android:layout_width="match_parent"
-        android:layout_height="141dp"
-        android:text="리뷰 쓰기 제보 하기"
-        android:textAlignment="center"
-        android:textColor="#03A9F4" />
+        android:layout_height="50dp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_gravity="center">
-
-        <ImageButton
-            android:id="@+id/review_review"
-            android:layout_width="70dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:src="@drawable/icon_review" />
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="80dp"
-            android:layout_height="100dp" />
+            android:id="@+id/textView3"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
-        <ImageButton
-            android:id="@+id/review_tip"
-            android:layout_width="70dp"
+        <Button
+            android:id="@+id/btn_review_review"
+            android:layout_width="30dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:src="@drawable/icon_review" />
+            android:background="@drawable/mapiconshape"
+            android:drawableTop="@drawable/review_review_xml"
+            android:text="리뷰쓰기"
+            android:textColor="#03A9F4"
+            android:textSize="20sp" />
 
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_review_report"
+            android:layout_width="30dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/mapiconshape"
+            android:drawableTop="@drawable/review__report_xml"
+            android:text="제보하기"
+            android:textColor="#03A9F4"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:text="혼자서 할 수 있는 일은 작습니다.                                                     함께 할 때 우리는 큰일을 할 수 있습니다.                                                                                             -헬렌 켈러-"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#03A9F4"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            tools:srcCompat="@drawable/disabled_image" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:gravity="bottom">
 
         <Button
             android:id="@+id/btn_map"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:background="#FFFFFF"
-            android:backgroundTint="#FFFFFF"
+            android:background="@drawable/mapiconshape"
             android:clickable="false"
+            android:drawableTop="@drawable/mapiconvxml"
             android:text="지도"
             android:textColor="#03A9F4" />
 
@@ -59,8 +114,8 @@
             android:id="@+id/btn_conv"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:background="#FFFFFF"
-            android:backgroundTint="#FFFFFF"
+            android:background="@drawable/mapiconshape"
+            android:drawableTop="@drawable/conviconbluexml"
             android:text="편의시설"
             android:textColor="#03A9F4" />
 
@@ -68,8 +123,9 @@
             android:id="@+id/btn_review"
             android:layout_width="138dp"
             android:layout_height="70dp"
-            android:background="#03A9F4"
+            android:background="@drawable/conviconshape"
             android:cursorVisible="false"
+            android:drawableTop="@drawable/reviewiconwhitexml"
             android:text="리뷰"
             android:textColor="#FFFFFF" />
 

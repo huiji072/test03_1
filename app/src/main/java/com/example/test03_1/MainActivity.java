@@ -4,14 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -25,16 +29,21 @@ import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity
+
         implements OnMapReadyCallback {
-
     private GoogleMap mMap;
-
+    private EditText mEditName;
+    private EditText mEditAge;
+    private TextView mTextResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mEditName = findViewById(R.id.editName);
+        mEditAge = findViewById(R.id.editAge);
+        mTextResult = findViewById(R.id.textResult);
         Button map = findViewById(R.id.btn_map);
         Button conv = findViewById(R.id.btn_conv);
         Button review = findViewById(R.id.btn_review);
@@ -71,7 +80,6 @@ public class MainActivity extends AppCompatActivity
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
-
 
     //Google Map (위치지정, 마커표시)
     @Override

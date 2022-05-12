@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+<!--제보 등록 창-->
+<!--    리뷰 -> 제보하기 -> 확인-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="새글 작성"
+        android:id="@+id/listAdd"/>
+
+    <TextView
+        android:id="@+id/review_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="리뷰제목 \n"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/review_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="별점 \n"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/review_contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="리뷰내용 \n"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+
+
+
+</LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-
+<!--지도-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -46,34 +46,34 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="bottom">
 
         <Button
             android:id="@+id/btn_map"
-            android:layout_width="138dp"
+            android:layout_width="135dp"
             android:layout_height="70dp"
-            android:background="#03A9F4"
-            android:backgroundTint="#03A9F4"
+            android:background="@drawable/conviconshape"
+            android:drawableTop="@drawable/mapiconwhitexml"
             android:text="지도"
             android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btn_conv"
-            android:layout_width="138dp"
+            android:layout_width="135dp"
             android:layout_height="70dp"
-            android:background="#FFFFFF"
-            android:backgroundTint="#FFFFFF"
+            android:background="@drawable/mapiconshape"
+            android:drawableTop="@drawable/conviconbluexml"
             android:text="편의시설"
             android:textColor="#03A9F4" />
 
         <Button
             android:id="@+id/btn_review"
-            android:layout_width="138dp"
+            android:layout_width="135dp"
             android:layout_height="70dp"
-            android:background="#FFFFFF"
-            android:backgroundTint="#FFFFFF"
+            android:background="@drawable/mapiconshape"
+            android:drawableTop="@drawable/reviewiconxml"
             android:text="리뷰"
             android:textColor="#03A9F4" />
 
