@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-<!--지도-->
+    <!--지도-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <EditText
             android:id="@+id/editText"
@@ -29,11 +30,53 @@
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="670dp">
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:text="정문-w6"
+                android:textAlignment="viewStart"
+                android:textColor="#03A9F4"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="후문-w6"
+                android:textColor="#03A9F4"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="w1-w6"
+                android:textColor="#03A9F4"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="650dp">
 
         <fragment
             android:id="@+id/map"
@@ -80,3 +123,4 @@
     </LinearLayout>
 
 </LinearLayout>
+

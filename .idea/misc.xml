@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Project/test03_1 (5)/test03_7 (2) (2)/app/src/main/res/layout/activity_main.xml" value="0.18342391304347827" />
         <entry key="..\:/Android_Project/test03_1/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Android_Project/test03_1/app/src/main/res/layout/layout_conv.xml" value="0.22826086956521738" />
         <entry key="..\:/Android_Project/test03_1/app/src/main/res/layout/layout_review.xml" value="0.176" />
@@ -16,11 +17,25 @@
         <entry key="..\:/Android_Project/test03_5/app/src/main/res/layout/layout_review_report.xml" value="0.1125" />
         <entry key="..\:/Android_Project/test03_5/app/src/main/res/layout/layout_review_result.xml" value="0.1125" />
         <entry key="..\:/Android_Project/test03_5/app/src/main/res/layout/layout_review_review.xml" value="0.1125" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/conviconbluexml.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/mapiconshape.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/mapiconvxml.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/mapiconwhitexml.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/review__report_xml.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/review_commit_content_xml.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/review_commit_rate2_xml.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/review_commit_title_xml.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/review_commot_rate_xml.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/review_review_newpost.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/review_review_xml.xml" value="0.1555" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/drawable/toilet_icon_xml.xml" value="0.1555" />
         <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/layout/activity_main.xml" value="0.14166666666666666" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/layout/database_review.xml" value="0.2" />
         <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/layout/layout_conv.xml" value="0.14166666666666666" />
         <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/layout/layout_conv_toilet.xml" value="0.14166666666666666" />
         <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/layout/layout_report_commit.xml" value="0.14166666666666666" />
-        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/layout/layout_review_commit.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/layout/layout_review.xml" value="0.264" />
+        <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/layout/layout_review_commit.xml" value="0.2" />
         <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/layout/layout_review_report.xml" value="0.25364583333333335" />
         <entry key="..\:/Android_Project/test03_7 (2) (2)/app/src/main/res/layout/layout_review_review.xml" value="0.25364583333333335" />
         <entry key="..\:/Android_Project/test03_7 (2)/app/src/main/res/layout/activity_main.xml" value="0.1" />

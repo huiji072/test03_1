@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -15,7 +16,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -23,6 +26,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.io.IOException;
 import java.util.List;
@@ -94,14 +99,41 @@ public class MainActivity extends AppCompatActivity
         markerOptions.title("강릉원주대학교");
         mMap.addMarker(markerOptions);
 
+//        정문<->W6 경로 표시
+        PolylineOptions FrontDoor_W6 = new PolylineOptions()
+                .add(
+                        new LatLng(37.30625212, 127.92448392),
+                        new LatLng(37.30625212, 127.9244604),
+                        new LatLng(37.30538937, 127.92661116),
+                        new LatLng(37.330564343, 127.92232482)
+                );
+
+        RadioGroup rg = findViewById(R.id.radioGroup); //라디오 그룹
+
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @SuppressLint("NonConstantResourceId")
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                //정문-W6 버튼 클릭시 해당 경로 출력
+                if(radioGroup.getId() == R.id.radioGroup){
+                    switch (i){
+                        case R.id.radio1:
+                            Polyline polyline = mMap.addPolyline(FrontDoor_W6);
+                            break;
+                        case R.id.radio2:
+                            Toast.makeText(getApplicationContext(), "후문-w6 test", Toast.LENGTH_SHORT).show();
+                            break;
+                    }
+                }
+
+            }
+        });
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(GWNU, 17));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
         mMap.setMyLocationEnabled(true);
-
-
     }
 
     //네비게이션 기능
